@@ -202,7 +202,7 @@ void vVerContactos()
 		for(i=0; i<vtrUtilizador->iNumAmigos; i++)
 		{
 			iNumConta=vtrUtilizador->vtrAmigos[i].iNumConta;
-			printf("Nome: %s \t Número de cuenta: %d\n", vtrBaseUtilizadores[iNumConta-1].cNome, iNumConta);
+			printf("Nome: %s \t Número de conta: %d\n", vtrBaseUtilizadores[iNumConta-1].cNome, iNumConta);
 		}
 	}
 	else
@@ -225,7 +225,7 @@ bool bContactoExiste(int iNumConta, regUtilizador *vtrUtilizador)
 /*-------------------------------------------------------------------------------------------------------------------------*/
 void vDepositarDinheiro()
 {
-	float fQuantidade=fObterNumero("Ingrese la cantidad que desea añadir a su cuenta");
+	float fQuantidade=fObterNumero("Ingrese la cantidad que desea añadir a su conta");
 	vEntrar(fQuantidade);
 	system("PAUSE");
 }
@@ -234,7 +234,7 @@ void vEntrar(float fQuantidade)
 {
 	vTransferir(iSessaoNumUtilizador, iSessaoNumUtilizador, fQuantidade);
 	vtrBaseUtilizadores[iSessaoNumUtilizador-1].fDinheiro+=fQuantidade;
-	printf("Se ha ingresado $%f a su cuenta\n", fQuantidade);
+	printf("Se ha ingresado $%f a su conta\n", fQuantidade);
 }
 /*-------------------------------------------------------------------------------------------------------------------------*/
 void vRetirarDinheiro()
